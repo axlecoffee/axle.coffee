@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #clipboardMessages {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+    .clipboardMessage {
+      padding: 10px;
+      background-color: #333;
+      color: #fff;
+      border-radius: 5px;
+      margin-top: 10px;
+      opacity: 0;
+      animation: fadeIn 1s forwards, fadeOut 0.2s 2.2s forwards;
+    }
+    @keyframes fadeIn {
+      from { opacity: 1; transform: translateX(100px); }
+      to { opacity: 1; transform: translateX(0); }
+    }
+    @keyframes fadeOut {
+      from { opacity: 1; transform: translateX(0); }
+      to { opacity: 1; transform: translateX(200px); }
+    }
+  </style>
+</head>
+<body>
+  <button id="copyButton">Copy "Hello" to clipboard</button>
+  <div id="clipboardMessages"></div>
+  <script>
+    let messageCount = 0;
+
+document.getElementById('copyButton').addEventListener('click', function() {
+  const message = document.createElement('div');
+  message.textContent = 'Copied to clipboard!';
+  message.classList.add('clipboardMessage');
+  document.getElementById('clipboardMessages').prepend(message);
+
+  // Check if there are 5 or more messages
+  messageCount++;
+  if (messageCount >= 5) {
+    // Prevent new messages from being shown
+    this.removeEventListener('click', arguments.callee);
+  }
+
+  setTimeout(function() {
+    message.remove();
+    messageCount--;
+    // 1s + 0.2 + 2.2 with a buffer
+  }, 3450);
+});
+  </script>
+</body>
+</html>
+
+
+
