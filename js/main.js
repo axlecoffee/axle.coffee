@@ -38,3 +38,11 @@ const copyElements = document.querySelectorAll('[id^="copy"]');
 copyElements.forEach((element) => {
   element.addEventListener('click', showMessage);
 });
+
+
+const modeToggle = document.getElementById("mode-toggle");
+const body = document.body;
+
+modeToggle.addEventListener("click", () => {
+  body.classList.toggle("dark-mode");
+});

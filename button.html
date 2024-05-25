@@ -1,62 +1,95 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <style>
-    #clipboardMessages {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-    }
-    .clipboardMessage {
-      padding: 10px;
-      background-color: #333;
-      color: #fff;
-      border-radius: 5px;
-      margin-top: 10px;
-      opacity: 0;
-      animation: fadeIn 1s forwards, fadeOut 0.2s 2.2s forwards;
-    }
-    @keyframes fadeIn {
-      from { opacity: 1; transform: translateX(100px); }
-      to { opacity: 1; transform: translateX(0); }
-    }
-    @keyframes fadeOut {
-      from { opacity: 1; transform: translateX(0); }
-      to { opacity: 1; transform: translateX(200px); }
-    }
-  </style>
-</head>
-<body>
-  <button id="copyButton">Copy "Hello" to clipboard</button>
-  <div id="clipboardMessages"></div>
-  <script>
-    let messageCount = 0;
+<style> 
+.main_selection_item {
+  margin-top: 1em;
+  text-decoration: none;
+  float: right;
+  margin-right: 1em;
+  position: relative;
+}
 
-document.getElementById('copyButton').addEventListener('click', function() {
-  const message = document.createElement('div');
-  message.textContent = 'Copied to clipboard!';
-  message.classList.add('clipboardMessage');
-  document.getElementById('clipboardMessages').prepend(message);
+.main_selection_button_item {
+  color: var(--button_text_color);
+  background-color: var(--button_background_color);
+  width: calc(7.5em / 2 - 5px);
+  border-radius: 0.3em;
+  min-height: 1.7em;
+  min-width: 1.7em;
+  display: flex;
+  cursor: pointer;
+}
 
-  // Check if there are 5 or more messages
-  messageCount++;
-  if (messageCount >= 5) {
-    // Prevent new messages from being shown
-    this.removeEventListener('click', arguments.callee);
-  }
+.line {
+  fill: none;
+  stroke: var(--button_text_color);
+  stroke-width: 6;
+  transition: stroke 750ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dasharray 750ms cubic-bezier(0.4, 0, 0.2, 1), stroke-dashoffset 750ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-  setTimeout(function() {
-    message.remove();
-    messageCount--;
-    // 1s + 0.2 + 2.2 with a buffer
-  }, 3450);
+.line1 {
+  stroke-dasharray: 60 207;
+  stroke-width: 4;
+}
+.line2 {
+  stroke-dasharray: 60 60;
+  stroke-width: 4;
+}
+.line3 {
+  stroke-dasharray: 60 207;
+  stroke-width: 4;
+}
+.opened .line1 {
+  stroke-dasharray: 90 207;
+  stroke-dashoffset: -134;
+  stroke: var(--menu_active_text_color);
+  stroke-width: 6;
+}
+.opened .line2 {
+  stroke-dasharray: 1 60;
+  stroke-dashoffset: -30;
+  stroke: var(--menu_active_text_color);
+  stroke-width: 6;
+}
+.opened .line3 {
+  stroke-dasharray: 90 207;
+  stroke: var(--menu_active_text_color);
+  stroke-dashoffset: -134;
+  stroke-width: 6;
+}
+
+.side-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 10px;
+  display: none;
+}
+
+.main_selection_button_item.opened + .side-menu {
+  display: block;
+}
+</style>
+<script>
+  document.getElementById('main_selection_list_item').addEventListener('click', function() {
+  this.classList.toggle('opened');
+  this.setAttribute('aria-expanded', this.classList.contains('opened'));
 });
-  </script>
-</body>
-</html>
+</script>
 
-
-
+<a class="main_selection_item">
+  <button class="main_selection_button_item" id="main_selection_list_item" aria-label="Main Menu">
+    <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+      <path class="line line1" d="M 20,34.7777 H 80 C 80,35 94.498839,28.817352 94,66.711331 94,77.980673 91.966081,81.670246 85.259173,81.667751 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25,25" />
+      <path class="line line2" d="M 20,50 H 80" />
+      <path class="line line3" d="M 20,65 H 80 C 80,65 94.498839,71.182648 94,33.288669 94,22.019327 89.966081,18.332249 85.259173,18.332249 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25,75" />
+    </svg>
+  </button>
+  <div class="side-menu">
+    <ul>
+      <li><a href="#">Menu Item 1</a></li>
+      <li><a href="#">Menu Item 2</a></li>
+      <li><a href="#">Menu Item 3</a></li>
+    </ul>
+  </div>
+</a>
