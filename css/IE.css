@@ -1,0 +1,150 @@
+/* brudda ewww */
+
+body {
+    font-family: Arial, sans-serif;
+    height: 100%;
+    background-image: url('../img/ie_back.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    -ms-background-size: 100% 100%;
+    margin: 0; /* add this to remove default margin */
+}
+
+table {
+    height: 100vh; /* use 100vh instead of 100% to force a fullscreen like background on IE5 plus */
+}
+
+html, body {
+    height: 100%;
+}
+
+table {
+    height: 100%;
+}
+
+.sidebar-list {
+    height: 100%;
+}
+
+.sidebar-list {
+    background-color: #001121;
+    border: 2px solid #292f3e;
+    position: absolute; 
+    height: 100%; 
+    width: 200px; 
+    margin-bottom: 120px; 
+}
+
+.footer-text-line {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding-bottom: 20%;
+}
+
+.sidebar-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar-list-item {
+    border-bottom: 2px solid #54628c;
+    padding: 4px;
+}
+
+.sidebar-list-break {
+    border-bottom: 8px solid #38405a;
+    padding: 4px;
+}
+
+.sidebar-list-item a {
+    text-decoration: none;
+    padding: 20px; /* added padding */
+    color: #cac9c9;
+}
+
+.sidebar-list-item a:hover {
+    color: #6abaa2;
+}
+
+.content-list-item ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.content-list-item a {
+    text-decoration: none;
+    padding: 10px; 
+    color: #cac9c9;
+}
+
+.content-list-item a:hover {
+    color: #6abaa2;
+    padding: 12px;
+}
+
+.content h1 {
+    color:#6abaa2;
+}
+
+.sidebar-title {
+    text-align: center;
+    text-decoration: none;
+    display: block; 
+    font-size: 30px;
+    color: #558269;
+}
+
+.content-list-item {
+    text-decoration: none;
+    color: #FFF;
+}
+
+.sidebar-title-smol {
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    color: #507d70;
+    display: block; 
+}
+
+.footer-list-item b {
+    text-decoration: none;
+    padding: 4px; /* added padding */
+    font-size: 12px;
+    color: #68a593;
+}
+
+.footer-list-item {
+    list-style: none;
+    border-bottom: 2px solid #16171a;
+    padding: 4px;
+}
+
+.sidebar-list .logo {
+    position: absolute;
+    bottom: 0;
+    display: block; /* use display: block instead of display: inline */
+    padding: 4px;
+    width: 45%; /* set width to 50% to make room for both images */
+}
+
+.sidebar-list .logo.first {
+    left: 0;
+}
+
+.sidebar-list .logo.last {
+    right: 0;
+}
+
+.content {
+    padding: 20px;
+    color: #e3e3e3;
+}
+
+.content h1 {
+    color: #dfdfdf;
+}

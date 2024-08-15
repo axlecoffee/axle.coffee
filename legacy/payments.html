@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Browsing axle.coffee IE8</title>
+  <link rel="stylesheet" type="text/css" href="../css/IE.css">
+</head>
+<body>
+  <table width="100%" border="0" cellpadding="0" cellspacing="0" height="100%">
+    <tr height="100%">
+      <td width="200" valign="top" height="100%" style="position: relative;">
+        <div class="sidebar-list" style="height: 100%;">
+          <div>
+            <ul>
+              <li class="sidebar-list-item"><span class="sidebar-title">Axle's Coffee</span></li>
+              <li class="sidebar-list-break"><span class="sidebar-title-smol" id="currentTime"></span></li>
+              <li class="sidebar-list-item"><a href="./home.html">Home</a></li>
+              <li class="sidebar-list-item"><a href="./projects.html">Projects</a></li>
+              <li class="sidebar-list-item"><a href="./links.html">Links</a></li>
+              <li class="sidebar-list-item"><a href="#">Payments</a></li>
+              <li class="sidebar-list-item"><a href="./question.html">Why IE?</a></li>
+            </ul>
+          </div>
+          <div class="push"></div>
+          <div class="footer-text-line">
+            <li class="footer-list-item">
+              <b>This page is best viewed in</b>
+            </li>
+          </div>
+          <div class="image-container">
+            <img src="../img/ie_animated.gif" alt="This website is best enjoyed using Internet Explorer 8" class="logo first">
+            <img src="../img/now9.gif" alt="This website is best enjoyed using Netscape Now!" class="logo last">
+          </div>
+        </div>
+      </td>
+      <td valign="top" height="100%">
+        <div class="content">
+          <h1>Axle's Coffee - Payment Links</h1>
+          <h3>All my valid payment links<br>Please note that I regularly check and update my payment links.
+            If a payment type is not listed, I do not accept or use it!</h3>
+        
+          <p>LTC: LXMXBtStQvDGJ35WtFUddmhY1TbVRUCHyc</p>
+          <p>BTC: bc1q5zllqmus8nxh9clqm5veefs8tq7weq52ag2ulk</p>
+          <p>PayPal: axlecat284@outlook.com</p>
+          <br>
+          <p>My discord accounts are:<br>@axle.coffee (790736254714642453)<br>@axlecoffee (967324293799219251)<br>I will keep this updated indefinitely.</p>
+        </td>
+      </tr>
+    </table>
+
+  <script>
+
+
+    function updateTime() {
+      var currentTime = new Date();
+      var hours = currentTime.getHours();
+      var minutes = currentTime.getMinutes();
+      var seconds = currentTime.getSeconds();
+      var ampm = hours >= 12 ? 'PM' : 'AM';
+      hours = hours % 12;
+      hours = hours ? hours : 12; // 0 -> 12
+      minutes = minutes < 10 ? '0' + minutes : minutes;
+      seconds = seconds < 10 ? '0' + seconds : seconds;
+      document.getElementById("currentTime").innerHTML = hours + ':' + minutes + ':' + seconds + ' ' + ampm;
+    }
+  
+    // Update the time every second
+    setInterval(updateTime, 1000);
+  
+    // Initial update
+    updateTime();
+  </script>
+</body>
+</html>
