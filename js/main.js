@@ -1,5 +1,6 @@
 /* Menu Active Codes */
 
+
 let targets = document.querySelectorAll('[data-target]')
 targets.forEach(element => {
   element.addEventListener('click', () => {
