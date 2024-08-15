@@ -5,8 +5,21 @@
 -->
 <!DOCTYPE html>
 <html lang="en">
+<script>
+/*
+* sniff the browser to smell any smelly IE browsers (I have a windows xp machine only reason this is here) 
+* if it is IE, then we will use the IE version of axle.coffee
+*/
+  var userAgent = navigator.userAgent;
+  var browser;
+  if (userAgent.indexOf("MSIE") != -1 || userAgent.indexOf("Trident") != -1) {
+    browser = "Internet Explorer";
+    window.location = "legacy/home.html";
+  }
+  console.log("You are on " + browser);
+</script>
 <!--
-  Last Updated: 13th of April - 2024
+  Last Updated: 31th of July - 2024
 -->
 <head>
   <meta charset="UTF-8">
