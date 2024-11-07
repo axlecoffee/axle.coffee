@@ -1,0 +1,143 @@
+<!--
+    This project and all sites under it are licensed by a SkyStats Development license 
+    https://github.com/SkyStats-Development/license/blob/main/Miscellaneous%20Applications
+    https://github.com/SkyStats-Development/license
+-->
+<!DOCTYPE html>
+<html lang="en">
+<script>
+/*
+* sniff the browser to smell any smelly IE browsers (I have a windows xp machine only reason this is here) 
+* if it is IE, then we will use the IE version of axle.coffee
+*/
+  var userAgent = navigator.userAgent;
+  var browser;
+  if (userAgent.indexOf("MSIE") != -1 || userAgent.indexOf("Trident") != -1) {
+    browser = "Internet Explorer";
+    window.location = "legacy/home.html";
+  }
+</script>
+<!--
+  Last Updated: 7th of November - 2024
+-->
+<head>
+  
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>
+    ❄ Browsing axle.coffee ❄
+  </title>
+  <link rel="icon" href="img/logo.png" type="image/x-icon">
+  <meta name="description" content="Personal Website">
+  <meta property="og:title" content="Axle's Coffee - The Website!" />
+  <meta property="og:description" content="Meow Meow Meow&#10;This website is Most likely using https://pandy.coffee's head as an armrest" />
+  <meta property="og:author" content="Axle Duggan" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400&amp;display=swap">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/winter_css.css">
+</head>
+<body>
+  <div class="snowflakes" aria-hidden="true">
+    <div class="snowflake">❆</div>
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❃</div>
+    <div class="snowflake">❊</div>
+    <div class="snowflake">❆</div>
+    <div class="snowflake">❃</div>
+    <div class="snowflake">❊</div>
+    <div class="snowflake">❉</div> 
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❃</div>
+    <div class="snowflake">❊</div>
+    <div class="snowflake">❉</div>
+    <div class="snowflake">❅</div>
+    <div class="snowflake">❃</div>
+    <div class="snowflake">❊</div>
+    <div class="snowflake">❆</div>
+    <div class="snowflake">❃</div>
+    <div class="snowflake">❊</div>
+  </div>
+  <menu>
+    <nav>
+      <div class="main_selection_item">
+        <button class="main_selection_button_item" onclick="this.classList.toggle('opened');  this.setAttribute('aria-expanded', this.classList.contains('opened'))" aria-label="Main Menu">
+          <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <path class="line line1" d="M 20,34.7777 H 80 C 80,35 94.498839,28.817352 94,66.711331 94,77.980673 91.966081,81.670246 85.259173,81.667751 79.552261,81.667751 75.000211,74.999942 75.000211,74.999942 L 25,25" />
+            <path class="line line2" d="M 20,50 H 80" />
+            <path class="line line3" d="M 20,65 H 80 C 80,65 94.498839,71.182648 94,33.288669 94,22.019327 89.966081,18.332249 85.259173,18.332249 79.552261,18.332249 75.000211,25.000058 75.000211,25.000058 L 25,75" />
+          </svg>
+        </button>
+        <div class="dropdown-menu">
+          <ul class="main_selection_menu_item">
+            <li>
+              <a href="index.html" class="main_selection_menu_button_item">
+                <i class="ai-home"></i>
+                <span>Home</span>
+              </a>
+            </li>
+
+            <li>
+              <a class="main_selection_menu_button_item">
+                <i class="ai-sun-fill" id="mode-toggle"></i>
+                <span>Color Mode</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </menu>
+  <header>
+    <div class="header_img flex_column_center">
+      <img src="img/meow.png" alt="Logo" />
+    </div>
+    <div class="header_text flex_column_center">
+      <h1>Axle</h1>
+      <h2>Credits</h2>
+    </div>
+    <div class="header_svg_list flex_row_center">
+
+      <!-- Menu Codes End -->
+  </header>
+  <main>
+    <!-- Menu Container 1 Codes Start -->
+    <section id="main_section_container_1" class="flex_column_center">
+      <!-- Menu Text Item -->
+      <div class="main_text_item-c">
+        <p>This site was originally made from a template unfortunately I have no clue where I found it<br><br>
+            ALL changes that I have made are available on the github: github.com/axlecoffee/axle.coffee<br><br>
+            Regarding background images:
+            <br>
+            <br>
+            ALL images were found via google search aside from:
+            "Winter-Dark | Winter-Light"
+            <br>
+            "Winter-Dark" and "Winter-Light" are images from The Stantig Group
+            <br> ALL used in the past are still hosted on my website - please e-mail me at @bloodymountain@outlook.com and request a takedown if your work has been used or is hosted.
+            <br> all images are fully accessible to anyone by typing in the url https://axle.coffee/img/< file name here ><br>
+            For a list of files please see the github repo and the image folder | do NOT pr the github requesting removal of image(s) as that will be ignored - email me directly as I would love to work out an agreement / provide watermark
+            <br>This is a personal website and no links are being used for "comercial" use - this is the same as using an image for a profile picture on a popular social media platform <br>
+            <br>
+            <br>
+            Please allow 14 buisness days for any requests for removal or edits.
+
+            <br>
+            <br>
+            "All project rights" protects only my code. 
+        </p>
+      </div>
+  </main>
+  <footer>
+    <!-- Footer Codes Start -->
+    <div class="footer_div_item flex_row_footer">
+      <a class="footer_a_item">Axle Duggan</a>&nbsp;| © 2022-2024 all project rights reserved | 
+      <a class="footer_a_item" href="https://github.com/SkyStats-Development/license">&nbsp;SkyStats Development</a>
+    </div>
+    
+  </footer>
+  <!-- Footer Codes End -->
+  <script src="js/main.js"></script>
+  <script src="https://unpkg.com/akar-icons-fonts"></script>
+</body>
+</html>
