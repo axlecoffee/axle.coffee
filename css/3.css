@@ -285,7 +285,7 @@ body {
 .crimis_button_item {
   color: var(--button_text_color);
   background-color: var(--button_background_color);
-  width: 20em;
+  width: 22em;
   border-radius: 1em;
   min-height: 3.7em;
   text-align: center;
@@ -341,7 +341,7 @@ body {
 .main_small_crimis_button_item {
   color: var(--button_text_color);
   background-color: var(--button_background_color);
-  width: 7em;
+  width: calc(30em / 2.3 - 5px);
   border-radius: 1em;
   min-height: 3.7em;
   text-align: center;
@@ -351,7 +351,7 @@ body {
 .main_tiny_crimis_button_item {
   color: var(--button_text_color);
   background-color: var(--button_background_color);
-  width: 3em;
+  width: calc(30em / 4 - 5px);
   border-radius: 1em;
   min-height: 3.7em;
   text-align: center;

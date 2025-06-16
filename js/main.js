@@ -47,3 +47,25 @@ modeToggle.addEventListener('click', () => {
 });
 
 // onload(body.classList.toggle('dark-mode'));
+
+// Dropdown menu toggle for hamburger menu
+/**
+ * Ensures the entire .main_selection_button_item is clickable, not just the SVG.
+ * Uses event delegation to handle clicks on the button or any of its children.
+ */
+document.querySelectorAll('.main_selection_button_item').forEach(btn => {
+	btn.addEventListener('click', function (e) {
+		// Only respond to left-clicks
+		if (e.button !== 0) return;
+		// Prevent default for <button>
+		e.preventDefault();
+		// Find the dropdown-menu sibling
+		const dropdown = this.parentElement.querySelector('.dropdown-menu');
+		if (dropdown) {
+			dropdown.classList.toggle('opened');
+		}
+	});
+});
+
+
+
