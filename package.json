@@ -22,7 +22,7 @@
 		"test": "jest",
 		"test:watch": "jest --watch",
 		"test:coverage": "jest --coverage --watchAll=false",
-		"test:ci": "jest --coverage --watchAll=false --ci",
+		"test:ci": "jest --coverage --watchAll=false --ci --passWithNoTests",
 		"format": "prettier --write .",
 		"format:check": "prettier --check .",
 		"clean": "rm -rf .next out node_modules/.cache",
