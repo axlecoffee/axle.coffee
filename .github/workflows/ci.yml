@@ -38,7 +38,7 @@ jobs:
         run: pnpm run lint:check
 
       - name: Run tests
-        run: pnpm test --passWithNoTests --ci
+        run: pnpm run test -- --passWithNoTests --ci
 
   build:
     needs: test
