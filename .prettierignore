@@ -1,0 +1,36 @@
+# Prettier ignore file
+# Ignore build outputs
+.next/
+out/
+dist/
+build/
+
+# Ignore dependencies
+node_modules/
+
+# Ignore generated files
+*.log
+*.lock
+pnpm-lock.yaml
+package-lock.json
+yarn.lock
+
+# Ignore legacy assets
+legacy/
+css/IE.css
+
+# Ignore generated types
+*.d.ts
+!src/**/*.d.ts
+
+# Ignore environment files
+.env*
+
+# Ignore IDE files
+.vscode/
+.idea/
+
+# Ignore temporary files
+*.tmp
+*.temp
+.cache/

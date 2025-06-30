@@ -1,0 +1,137 @@
+@import 'tailwindcss';
+
+/* Import original Axle's Coffee styles AFTER Tailwind to ensure they override */
+@import './styles/reset.css';
+@import './styles/style.css';
+
+/* React-specific dropdown menu positioning fix - override original style.css */
+.dropdown-menu {
+	display: none !important;
+	position: absolute !important;
+	top: 100% !important;
+	right: 0 !important;
+	z-index: 1000 !important;
+	margin-top: 0.5rem !important;
+	background-color: var(--button_background_color) !important;
+	border-radius: 0.3em !important;
+	padding: 0.2rem !important;
+	width: calc(7.5em / 2 - 5px) !important;
+	box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3) !important;
+	border: 1px solid var(--image_border_color, #1f232e) !important;
+}
+
+.dropdown-menu.opened {
+	display: block !important;
+}
+
+/* Ensure main_selection_item is positioned relative for dropdown positioning */
+.main_selection_item {
+	position: relative;
+}
+
+/* Dropdown menu item styles - removed li wrapper */
+
+.main_selection_menu_button_item {
+	display: flex !important;
+	align-items: center !important;
+	justify-content: center !important;
+	padding: 0.2rem !important;
+	background: none !important;
+	border: none !important;
+	color: var(--menu_text_color) !important;
+	cursor: pointer !important;
+	width: 100% !important;
+	min-height: 1.7em !important;
+	border-radius: 0.3em !important;
+	transition: color 0.2s ease !important;
+	font-size: 0.75rem !important;
+	margin: 0 !important;
+}
+
+.main_selection_menu_button_item:hover {
+	color: var(--menu_active_text_color, var(--button_text_hover_color)) !important;
+}
+
+.dropdown-menu ul {
+	margin: 0 !important;
+	padding: 0 !important;
+	list-style: none !important;
+}
+
+/* Fix copy notification slideout animation */
+@keyframes fadeOut {
+	from {
+		opacity: 1;
+		transform: translateX(0);
+	}
+	to {
+		opacity: 0;
+		transform: translateX(300px);
+	}
+}
+
+.clipboardMessage {
+	animation:
+		fadeIn 1s forwards,
+		fadeOut 0.5s 2.5s forwards !important;
+}
+
+/* Enhanced clipboard notification styling */
+.clipboardMessage {
+	background: linear-gradient(
+		135deg,
+		rgba(15, 17, 32, 0.2) 0%,
+		rgba(26, 28, 43, 0.2) 25%,
+		rgba(43, 41, 66, 0.2) 50%,
+		rgba(74, 58, 97, 0.2) 75%,
+		rgba(169, 109, 174, 0.2) 100%
+	);
+	backdrop-filter: blur(10px);
+}
+
+/* Light mode clipboard notification */
+body.light-mode .clipboardMessage {
+	background: rgba(232, 232, 232, 0.674);
+	backdrop-filter: blur(10px);
+	color: var(--title_color_light, #16171a);
+}
+
+/* Fix SVG click interference with button */
+.main_selection_button_item svg,
+.main_selection_button_item svg * {
+	pointer-events: none !important;
+}
+
+/* Fix mode toggle icon click interference */
+.main_selection_menu_button_item i,
+.main_selection_menu_button_item svg,
+.main_selection_menu_button_item svg *,
+#mode-toggle {
+	pointer-events: none !important;
+}
+
+/* Smooth transition for dark/light mode switching - exclude SVG paths */
+body {
+	transition:
+		background 0.5s ease,
+		background-image 0.5s ease !important;
+}
+
+body *:not(.line):not(path):not(svg) {
+	transition:
+		color 0.5s ease,
+		background-color 0.5s ease,
+		border-color 0.5s ease !important;
+}
+
+/* Credits page link styles */
+.credits-link {
+	color: var(--footer_link_text_color);
+	text-decoration: underline;
+	transition: color 0.2s;
+}
+
+.credits-link:hover {
+	color: var(--menu_active_text_color);
+	text-decoration: underline wavy;
+}
