@@ -177,7 +177,7 @@ export default async function Home() {
 										Ghosty
 									</a>
 									{' // '}
-									cool dev + friend,,, ily qt
+									cool dev + best animal 👑 + marriageable friend,,, ily qt
 								</li>
 								<li>
 									&#62;{' '}
