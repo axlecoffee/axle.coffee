@@ -1,0 +1,10 @@
+services:
+  app:
+    container_name: webcoffee
+    build: .
+    env_file: .env
+    ports:
+      - '8800:8800'
+    restart: unless-stopped
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <title>axle.coffee</title>
+  <link rel="stylesheet" type="text/css" href="./css/IE.css">
+</head>
+<!-- bgcolor/text/link/vlink: presentational attrs for IE3 and NS3/4 that ignore CSS -->
+<!-- background tiles in NS4 (best possible without CSS background-size) -->
+<body bgcolor="#000010" text="#e3e3e3" link="#cac9c9" vlink="#6abaa2" alink="#ffffff"
+      background="./img/ie_back.jpg">
+
+<!--[if lte IE 7]>
+<!-- Stretched background img for IE 5-7: position:absolute behind all content -->
+<div style="position:absolute;top:0;left:0;width:100%;height:100%;z-index:-1;overflow:hidden;">
+  <img src="./img/ie_back.jpg" width="100%" height="100%" border="0" alt="">
+</div>
+<![endif]-->
+
+<table width="100%" border="0" cellpadding="0" cellspacing="0" height="100%">
+  <tr height="100%">
+    <!-- bgcolor fallback for IE3/NS4 that cannot apply CSS background-color -->
+    <td width="200" valign="top" height="100%" bgcolor="#001121">
+      <!-- nav.js uses document.write works NS2+, IE3+, and modern -->
+      <script type="text/javascript" src="./js/nav.js"></script>
+      <script type="text/javascript">writeNav('home.html');</script>
+      <noscript>
+        <div class="sidebar-list">
+          <ul>
+            <li class="sidebar-list-item"><span class="sidebar-title">Axle's Coffee</span></li>
+            <li class="sidebar-list-item"><a href="#">Home</a></li>
+            <li class="sidebar-list-item"><a href="./projects.html">Projects</a></li>
+            <li class="sidebar-list-item"><a href="./links.html">Links</a></li>
+            <li class="sidebar-list-item"><a href="./payments.html">Payments</a></li>
+            <li class="sidebar-list-item"><a href="./question.html">Why IE?</a></li>
+          </ul>
+        </div>
+      </noscript>
+    </td>
+    <td valign="top" height="100%">
+      <div class="content">
+        <h1>Welcome to Axle's Coffee</h1>
+        <p>Currently in development<br>completed:<br>Projects<br>payments</p>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<!-- compat.js: browser detection + dynamic clock (IE4+, modern; static in NS4) -->
+<script type="text/javascript" src="./js/compat.js"></script>
+</body>
+</html>
