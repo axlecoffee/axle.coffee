@@ -215,7 +215,11 @@ export default async function Home() {
 			<footer>
 				<div className="max-w-5xl mx-auto px-2">
 					<div className="py-2">
-						<span className="text-xs text-ctp-subtext0">&copy; 2022-{new Date().getFullYear()} axle.coffee</span>
+						<span className="text-xs text-ctp-lavender">&copy; 2022-{new Date().getFullYear()} {" "}
+							<a href="https://github.com/axlecoffee/axle.coffee/blob/15c10488577778b8d5fa9d4e9e1eb36866e444ed/LICENSE" target="_blank" rel="noreferrer" className="text-ctp-lavender hover:text-ctp-text underline">
+								axle.coffee
+							</a>
+						</span>
 					</div>
 					<hr className="border-ctp-surface1" />
 					<div className="py-3 flex items-center justify-between">
