@@ -13,11 +13,11 @@ export default function NotFound() {
 					}}
 				>
 					<h2 className="font-ibm text-ctp-subtext0 text-xs uppercase tracking-widest mb-3">404</h2>
-					<p className="text-ctp-text text-sm">this page does not exist.</p>
+					<p className="text-ctp-text text-sm">this page does not exist. (maybe i havent made it yet)</p>
 					<p className="text-ctp-subtext0 text-xs mt-2">
 						&#62;{' '}
 						<a href="/" className="text-ctp-red hover:text-ctp-text underline">
-							go home
+							I&apos;m scared, take me home..
 						</a>
 					</p>
 				</div>
