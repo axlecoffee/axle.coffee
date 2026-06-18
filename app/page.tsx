@@ -74,7 +74,7 @@ export default async function Home() {
 							<div className="text-sm space-y-2">
 								<p className="text-ctp-text">
 									Haia! I&apos;m Axle [he/them] and this is my bio/whatever page.<br></br>
-									I&apos;m currently a 17-year-old{' '}
+									I&apos;m currently an 18-year-old{' '}
 									<a href="https://en.wikipedia.org/wiki/Occupational_burnout" target="_blank" rel="noreferrer" className="text-ctp-blue hover:text-ctp-text underline">
 										burned out
 									</a>{' '}
@@ -177,7 +177,7 @@ export default async function Home() {
 										Ghosty
 									</a>
 									{' // '}
-									cool dev + friend,,, ily qt
+									cool dev + best animal 👑 + marriageable friend,,, ily qt
 								</li>
 								<li>
 									&#62;{' '}
