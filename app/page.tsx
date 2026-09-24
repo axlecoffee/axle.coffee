@@ -198,7 +198,7 @@ export default async function Home() {
 							<hr className="border-ctp-surface1 my-2" />
 							<div className="flex gap-2 flex-wrap">
 								<a href="https://aprl.pet/" target="_blank" rel="noreferrer" style={{ lineHeight: 0 }}>
-									<Image src="https://aprl.pet/assets/badges/april.png" alt="April" width={88} height={31} style={{ imageRendering: 'pixelated' }} unoptimized />
+									<Image src="https://aprl.pet/badges/april.png" alt="April" width={88} height={31} style={{ imageRendering: 'pixelated' }} unoptimized />
 								</a>
 								<a href="https://meows.zip/" target="_blank" rel="noreferrer" style={{ lineHeight: 0 }}>
 									<Image src="https://meows.zip/meowszip.png" alt="meows.zip" width={88} height={31} style={{ imageRendering: 'pixelated' }} unoptimized />

@@ -6,7 +6,8 @@ RUN corepack enable
 
 FROM base AS deps
 WORKDIR /app
-COPY package.json pnpm-lock.yaml ./
+# pnpm-workspace.yaml carries the allowBuilds policy, pnpm 12 hard-errors without it
+COPY package.json pnpm-lock.yaml pnpm-workspace.yaml ./
 RUN --mount=type=cache,id=pnpm,target=/pnpm/store pnpm install --frozen-lockfile
 
 
